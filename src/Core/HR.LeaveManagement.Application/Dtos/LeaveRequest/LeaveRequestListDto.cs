@@ -1,6 +1,6 @@
-using HR.LeaveManagement.Application.Persistence.Dtos.Common;
+using HR.LeaveManagement.Application.Dtos.Common;
 
-namespace HR.LeaveManagement.Application.Persistence.Dtos.LeaveRequest
+namespace HR.LeaveManagement.Application.Dtos.LeaveRequest
 {
     public class LeaveRequestListDto : BaseDto
     {
