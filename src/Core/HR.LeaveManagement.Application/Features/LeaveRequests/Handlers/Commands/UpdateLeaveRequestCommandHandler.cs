@@ -26,11 +26,11 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Command
         {
             var leaveRequest = await _leaveRequestRepository.Get(request.Id);
 
-            if (request.LeaveRequestDto != null)
+            if (request.updateLeaveRequestDto != null)
             {
                 // var leaveRequest = await _leaveRequestRepository.Get(request.LeaveRequestDto.Id);
 
-                _mapper.Map(request.LeaveRequestDto, leaveRequest);
+                _mapper.Map(request.updateLeaveRequestDto, leaveRequest);
 
                 await _leaveRequestRepository.Update(leaveRequest);
             }
