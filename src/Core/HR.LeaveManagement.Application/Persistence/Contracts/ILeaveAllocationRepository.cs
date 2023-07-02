@@ -2,9 +2,9 @@ using HR.LeaveManagement.Domain;
 
 namespace HR.LeaveManagement.Application.Persistence.Contracts
 {
-    public interface ILeaveAllocationRepository : IGenericRepository<LeaveAllocation>
+    public interface ILeaveAllocationRepository : IGenericRepository<Domain.LeaveAllocation>
     {
-        Task<LeaveAllocation> GetLeaveAllocationWithDetails(int id);
-        Task<List<LeaveAllocation>> GetLeaveAllocationsWithDetails();
+        Task<Domain.LeaveAllocation> GetLeaveAllocationWithDetails(int id);
+        Task<List<Domain.LeaveAllocation>> GetLeaveAllocationsWithDetails();
     }
 }

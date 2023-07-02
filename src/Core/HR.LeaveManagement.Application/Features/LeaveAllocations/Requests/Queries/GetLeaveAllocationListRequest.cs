@@ -1,4 +1,5 @@
 using HR.LeaveManagement.Application.Dtos;
+using HR.LeaveManagement.Application.LeaveAllocation.Dtos;
 using MediatR;
 
 namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Requests.Queries
