@@ -1,3 +1,4 @@
+using HR.LeaveManagement.Application.Dtos.LeaveAllocation;
 using HR.LeaveManagement.Application.LeaveAllocation.Dtos;
 using MediatR;
 
@@ -5,6 +6,6 @@ namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Requests.Comm
 {
     public class CreateLeaveAllocationCommand : IRequest<int>
     {
-        public LeaveAllocationDto LeaveAllocationDto { get; set; }
+        public CreateLeaveAllocationDto LeaveAllocationDto { get; set; }
     }
 }

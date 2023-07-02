@@ -1,3 +1,4 @@
+using HR.LeaveManagement.Application.Exceptions;
 using HR.LeaveManagement.Application.Features.LeaveTypes.Requests.Commands;
 using HR.LeaveManagement.Application.Persistence.Contracts;
 using MediatR;
@@ -19,6 +20,10 @@ namespace HR.LeaveManagement.Application.Features.LeaveTypes.Handlers.Commands
         )
         {
             var leaveRequest = await _leaveRequestRepository.Get(request.Id);
+
+            if (leaveRequest == null)
+                throw new NotFoundException(nameof(leaveRequest), request.Id);
+
             await _leaveRequestRepository.Delete(leaveRequest);
 
             return Unit.Value;
