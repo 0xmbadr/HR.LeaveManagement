@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NSwag.CodeGeneration.CSharp" Version="13.19.0" />
+  </ItemGroup>
+
 </Project>
