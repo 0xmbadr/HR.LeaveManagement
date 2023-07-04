@@ -4,7 +4,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
     {
         public string Message { get; set; }
         public string ValidationErrors { get; set; }
-        public bool Success { get; set; } = true;
+        public bool Success { get; set; } = false;
         public T Data { get; set; }
     }
 }
