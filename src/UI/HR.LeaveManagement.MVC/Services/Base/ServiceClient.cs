@@ -14,7 +14,7 @@
 #pragma warning disable 3016 // Disable "CS3016 Arrays as attribute arguments is not CLS-compliant"
 #pragma warning disable 8603 // Disable "CS8603 Possible null reference return"
 
-namespace HR.LeaveManagement.MVC.Services.Base 
+namespace HR.LeaveManagement.MVC.Services.Base  
 {
     using System = global::System;
 
@@ -170,13 +170,11 @@ namespace HR.LeaveManagement.MVC.Services.Base
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v10.0.0.0))")]
     public partial class Client : IClient
     {
-        private string _baseUrl = "";
         private System.Net.Http.HttpClient _httpClient;
         private System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _settings;
 
-        public Client(string baseUrl, System.Net.Http.HttpClient httpClient)
+        public Client(System.Net.Http.HttpClient httpClient)
         {
-            BaseUrl = baseUrl;
             _httpClient = httpClient;
             _settings = new System.Lazy<Newtonsoft.Json.JsonSerializerSettings>(CreateSerializerSettings);
         }
@@ -186,12 +184,6 @@ namespace HR.LeaveManagement.MVC.Services.Base
             var settings = new Newtonsoft.Json.JsonSerializerSettings();
             UpdateJsonSerializerSettings(settings);
             return settings;
-        }
-
-        public string BaseUrl
-        {
-            get { return _baseUrl; }
-            set { _baseUrl = value; }
         }
 
         protected Newtonsoft.Json.JsonSerializerSettings JsonSerializerSettings { get { return _settings.Value; } }
@@ -215,7 +207,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
         public virtual async System.Threading.Tasks.Task<System.Collections.Generic.ICollection<LeaveAllocationDto>> LeaveAllocationAllAsync(System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/LeaveAllocation");
+            urlBuilder_.Append("api/LeaveAllocation");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -289,7 +281,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
         public virtual async System.Threading.Tasks.Task LeaveAllocationPOSTAsync(CreateLeaveAllocationDto body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/LeaveAllocation");
+            urlBuilder_.Append("api/LeaveAllocation");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -361,7 +353,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
         public virtual async System.Threading.Tasks.Task LeaveAllocationPUTAsync(UpdateLeaveAllocationDto body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/LeaveAllocation");
+            urlBuilder_.Append("api/LeaveAllocation");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -436,7 +428,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/LeaveAllocation/{id}");
+            urlBuilder_.Append("api/LeaveAllocation/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -514,7 +506,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/LeaveAllocation/{id}");
+            urlBuilder_.Append("api/LeaveAllocation/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -583,7 +575,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
         public virtual async System.Threading.Tasks.Task<System.Collections.Generic.ICollection<LeaveRequestDto>> LeaveRequestAllAsync(System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/LeaveRequest");
+            urlBuilder_.Append("api/LeaveRequest");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -657,7 +649,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
         public virtual async System.Threading.Tasks.Task LeaveRequestPOSTAsync(CreateLeaveRequestDto body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/LeaveRequest");
+            urlBuilder_.Append("api/LeaveRequest");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -732,7 +724,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/LeaveRequest/{id}");
+            urlBuilder_.Append("api/LeaveRequest/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -810,7 +802,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/LeaveRequest/{id}");
+            urlBuilder_.Append("api/LeaveRequest/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -886,7 +878,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/LeaveRequest/{id}");
+            urlBuilder_.Append("api/LeaveRequest/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -958,7 +950,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/LeaveRequest/changeApproval/{id}");
+            urlBuilder_.Append("api/LeaveRequest/changeApproval/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -1031,7 +1023,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
         public virtual async System.Threading.Tasks.Task<System.Collections.Generic.ICollection<LeaveTypeDto>> LeaveTypesAllAsync(System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/LeaveTypes");
+            urlBuilder_.Append("api/LeaveTypes");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -1105,7 +1097,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
         public virtual async System.Threading.Tasks.Task<BaseCommandResponse> LeaveTypesPOSTAsync(CreateLeaveTypeDto body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/LeaveTypes");
+            urlBuilder_.Append("api/LeaveTypes");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -1193,7 +1185,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
         public virtual async System.Threading.Tasks.Task LeaveTypesPUTAsync(LeaveTypeDto body, System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/LeaveTypes");
+            urlBuilder_.Append("api/LeaveTypes");
 
             var client_ = _httpClient;
             var disposeClient_ = false;
@@ -1268,7 +1260,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/LeaveTypes/{id}");
+            urlBuilder_.Append("api/LeaveTypes/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;
@@ -1346,7 +1338,7 @@ namespace HR.LeaveManagement.MVC.Services.Base
                 throw new System.ArgumentNullException("id");
 
             var urlBuilder_ = new System.Text.StringBuilder();
-            urlBuilder_.Append(BaseUrl != null ? BaseUrl.TrimEnd('/') : "").Append("/api/LeaveTypes/{id}");
+            urlBuilder_.Append("api/LeaveTypes/{id}");
             urlBuilder_.Replace("{id}", System.Uri.EscapeDataString(ConvertToString(id, System.Globalization.CultureInfo.InvariantCulture)));
 
             var client_ = _httpClient;

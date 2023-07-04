@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddHttpClient<IClient, Client>(
-    client => client.BaseAddress = new Uri("https://localhost:44340")
+    client => client.BaseAddress = new Uri("http://localhost:5110")
 );
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddSingleton<ILocalStorageService, LocalStorageService>();
